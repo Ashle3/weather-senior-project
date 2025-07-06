@@ -1,22 +1,22 @@
 <body>
-    <h2>City Name</h2>
-    <p>Verbal conditions go here</p>
+    <h2 class="cityName">{{ weatherData().address }}</h2>
+    <p>{{ weatherData().currentConditions.conditions }}</p>
     <div id="currentConditions">
         <div id="tempNicon">
-            <p id="currentTemp">85&deg;</p>
+            <p id="currentTemp">{{ weatherData().currentConditions.temp | number:'1.0-0' }}&deg;</p>
             <img src="" alt="Weather Icon">
         </div>
         <div id="currentStats">
-            <p>Hi: &deg;</p>
-            <p>Lo: &deg;</p>
-            <p>Feels Like: </p>
-            <p>Humidity: %</p>
-            <p>Dew Point: &deg;</p>
-            <p>Precip: in.</p>
+            <p>Hi: {{ weatherData().days[0].tempmax | number:'1.0-0'}}&deg;</p>
+            <p>Lo: {{ weatherData().days[0].tempmin | number:'1.0-0'}}&deg;</p>
+            <p>Feels Like: {{ weatherData().currentConditions.feelslike | number:'1.0-0'}}</p>
+            <p>Humidity: {{ weatherData().currentConditions.humidity | number:'1.0-0'}}%</p>
+            <p>Dew Point: {{ weatherData().currentConditions.dew | number:'1.0-0'}}&deg;</p>
+            <p>Precip: {{ weatherData().currentConditions.precip | number:'1.0-0'}} in.</p>
         </div>
     </div>
-    <p>Wind Speed: mph</p>
-    <p>Sunrise: </p>
-    <p>Sunset: </p>
-    <p>UV Index: </p>
+    <p>Wind Speed: {{ weatherData().currentConditions.windspeed | number:'1.0-0'}} mph</p>
+    <p>Sunrise: {{ weatherData().currentConditions.sunrise}}</p>
+    <p>Sunset: {{ weatherData().currentConditions.sunset }}</p>
+    <p>UV Index: {{ weatherData().currentConditions.uvindex }}</p>
 </body>
