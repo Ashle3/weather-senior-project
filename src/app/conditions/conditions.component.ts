@@ -4,7 +4,7 @@ import { DatePipe, DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-conditions',
-  imports: [DecimalPipe, DatePipe],
+  imports: [DecimalPipe],
   templateUrl: './conditions.component.html',
   styleUrl: './conditions.component.css',
   standalone: true

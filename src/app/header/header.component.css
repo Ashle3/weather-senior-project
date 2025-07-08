@@ -3,6 +3,9 @@ header{
     padding: 5px 10px;
 }
 
-h1{
-    color: white;
+h1 {
+  color: white;
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
