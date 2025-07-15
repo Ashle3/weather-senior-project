@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { HourlyComponent } from './hourly/hourly';
+import { HeaderComponent } from './header/header.component';
+import { WxDataService } from './wx-data.service';
 
 @Component({
   selector: 'app-wx-data',
-  imports: [ConditionsComponent, HourlyComponent],
+  imports: [ConditionsComponent, HourlyComponent, HeaderComponent],
   templateUrl: './wx-data.html',
   styleUrl: './wx-data.css',
   standalone: true
 })
 export class WxDataComponent {
-
+  public weatherService = inject(WxDataService);
 }

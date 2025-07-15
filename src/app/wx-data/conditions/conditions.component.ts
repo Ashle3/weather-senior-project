@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { DatePipe, DecimalPipe } from '@angular/common';
-import { HeaderComponent } from '../../header/header.component';
+import { HeaderComponent } from '../header/header.component';
 import { WxDataService } from '../wx-data.service';
 
 @Component({
@@ -12,23 +12,46 @@ import { WxDataService } from '../wx-data.service';
   standalone: true
 })
 export class ConditionsComponent implements OnInit{
-  [x: string]: any;
   public weatherService = inject(WxDataService);
   public weatherData = signal<any>(undefined);
 
+  public cityName1 = '';
+
   ngOnInit(): void {
-      this.loadConditions();
+      this.cityName1 = 'Hendron, VA';
+      // this.loadConditions(this.cityName1);
+      this.weatherService.search.subscribe(
+        (cityName: any) => {
+          this.cityName1 = cityName;
+          this.weatherService.getConditions(this.cityName1)
+          .subscribe({
+          next: (resData) => {
+          console.log(resData);
+          this.weatherData.set(resData);
+        }
+      });
+        }
+      )
+
+      this.weatherService.getConditions(this.cityName1)
+      .subscribe({
+        next: (resData) => {
+          console.log(resData);
+          this.weatherData.set(resData);
+        }
+      });
+
   }
 
-  loadConditions() {
-    this.weatherService.getConditions()
-    .subscribe({
-      next: (resData) => {
-        console.log(resData);
-        this.weatherData.set(resData);
-      }
-    });
-  }
+  // loadConditions(cityName: any) {
+  //   this.weatherService.getConditions(cityName)
+  //   .subscribe({
+  //     next: (resData) => {
+  //       console.log(resData);
+  //       this.weatherData.set(resData);
+  //     }
+  //   });
+  // }
 
   //currentConditions = this.weatherService.readWeather;
   // weatherData = signal<any>(undefined);

@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { WxDataService } from '../wx-data.service';
 
 @Component({
     selector: 'app-header',
@@ -9,11 +10,11 @@ import { FormsModule } from '@angular/forms';
     imports: [FormsModule]
 })
 export class HeaderComponent{
-    @Output() search = new EventEmitter<string>();
+    public weatherService = inject(WxDataService);
     searchCity = '';
 
     onSearch() {
         console.log(this.searchCity);
-        this.search.emit(this.searchCity);
+        this.weatherService.search.emit(this.searchCity);
     }
 }
