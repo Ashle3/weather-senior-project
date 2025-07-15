@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { ConditionsComponent } from './conditions/conditions.component';
-import { HourlyComponent } from './hourly/hourly';
+import { WxDataComponent } from './wx-data/wx-data';
 
 @Component({
   selector: 'app-root',
-  imports: [/*RouterOutlet,*/ HeaderComponent, ConditionsComponent, HourlyComponent],
+  imports: [/*RouterOutlet,*/ HeaderComponent, WxDataComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true
 })
 export class App {
   protected title = 'weather-senior-project';
+
+  onCitySearched(city: string) {
+
+  }
 }

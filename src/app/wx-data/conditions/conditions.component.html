@@ -12,7 +12,7 @@
             <p>Feels Like: {{ weatherData().currentConditions.feelslike | number:'1.0-0'}}</p>
             <p>Humidity: {{ weatherData().currentConditions.humidity | number:'1.0-0'}}%</p>
             <p>Dew Point: {{ weatherData().currentConditions.dew | number:'1.0-0'}}&deg;</p>
-            <p>Precip: {{ weatherData().currentConditions.precip | number:'1.0-0'}} in.</p>
+            <p>Precip: {{ weatherData().currentConditions.precip | number:'1.1-1'}} in.</p>
         </div>
     </div>
     <p>Wind Speed: {{ weatherData().currentConditions.windspeed | number:'1.0-0'}} mph</p>

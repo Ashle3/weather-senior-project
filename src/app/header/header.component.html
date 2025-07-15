@@ -1,8 +1,12 @@
-<header>
+<head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-</header>
+</head>
 <header>
     <h1>Weather Watch</h1>
+    <form class="search">
+        <input type="text" name="search" placeholder="Search Cities" [(ngModel)]="searchCity">
+        <button type="button" (click)="onSearch()">Search</button>
+    </form>
 </header>
