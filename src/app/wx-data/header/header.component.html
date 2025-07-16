@@ -6,7 +6,7 @@
 <header>
     <h1>Weather Watch</h1>
     <form class="search">
-        <input type="text" name="search" placeholder="Search Cities" [(ngModel)]="searchCity">
+        <input type="text" name="search" placeholder="Search Cities" (keydown)="onEnter($event)" [(ngModel)]="searchCity">
         <button type="button" (click)="onSearch()">Search</button>
     </form>
 </header>

@@ -14,26 +14,26 @@ import { WxDataService } from '../wx-data.service';
 export class ConditionsComponent implements OnInit{
   public weatherService = inject(WxDataService);
   public weatherData = signal<any>(undefined);
-
-  public cityName1 = '';
-
+  
   ngOnInit(): void {
-      this.cityName1 = 'Hendron, VA';
-      // this.loadConditions(this.cityName1);
       this.weatherService.search.subscribe(
         (cityName: any) => {
-          this.cityName1 = cityName;
-          this.weatherService.getConditions(this.cityName1)
+          this.weatherService.cityName1 = cityName;
+          this.weatherService.getConditions(this.weatherService.cityName1)
           .subscribe({
-          next: (resData) => {
-          console.log(resData);
-          this.weatherData.set(resData);
-        }
+           next: (resData) => {
+            console.log(resData);
+            this.weatherData.set(resData);
+            this.weatherService.error1.set(false);
+          },
+            error: () => {
+            this.weatherService.error1.set(true);
+            }
       });
         }
       )
 
-      this.weatherService.getConditions(this.cityName1)
+      this.weatherService.getConditions(this.weatherService.cityName1)
       .subscribe({
         next: (resData) => {
           console.log(resData);

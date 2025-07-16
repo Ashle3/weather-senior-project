@@ -14,7 +14,14 @@ export class HeaderComponent{
     searchCity = '';
 
     onSearch() {
-        console.log(this.searchCity);
+        //console.log(this.searchCity);
         this.weatherService.search.emit(this.searchCity);
+        this.searchCity = '';
+    }
+
+    onEnter(e: any) {
+        if(e.keyCode === 13) {
+            this.onSearch();
+        }
     }
 }

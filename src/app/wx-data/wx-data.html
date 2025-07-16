@@ -1,5 +1,14 @@
 <app-header ></app-header>
+@if(weatherService.error1()) {
+    <app-error></app-error>
+}
+
+@if(!weatherService.error1()) {
 <div id="currentHourly">
     <app-conditions class="conditions"></app-conditions>
     <app-hourly class="hourly"></app-hourly>
 </div>
+}
+
+
+

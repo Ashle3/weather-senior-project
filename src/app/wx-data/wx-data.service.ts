@@ -8,8 +8,9 @@ import { HeaderComponent } from "./header/header.component";
 export class WxDataService{
     private httpClient = inject(HttpClient);
     public search = new EventEmitter<string>();
+    public error1 = signal(false);
 
-    cityName = 'Hendron, VA';
+    public cityName1 = 'Hendron, VA';
 
     getConditions(cityName: any) {
         return this.httpClient.get(
