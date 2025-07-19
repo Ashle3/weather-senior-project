@@ -1,6 +1,7 @@
-@if(this.weatherService.isClicked === false) {
-    <button type="button" (click)="this.weatherService.setDefault()">Default</button>
+@if(this.weatherService.isClicked === false){
+    <button type="button" (click)="getDefaultCity()">Default</button>
 }
+
 
 @if(this.weatherService.isClicked === true) {
     <p class="defaultMsg">City Set as default!</p>

@@ -23,7 +23,7 @@ export class WxDataService{
     }
 
     public check(time: any, epoch: any){
-        if(time > epoch ){
+        if(time < epoch ){
             return true;
         } else {
             return false;
@@ -55,9 +55,10 @@ export class WxDataService{
     }
 
     //sets local storage to searched city
-    setDefaultCity(cityName: string){
-        localStorage.setItem('defaultCity', cityName);
-    }
+    // setDefaultCity(cityName: string){
+    //     this
+    //     localStorage.setItem('defaultCity', cityName);
+    // }
 
     setIcon(icon: string){
         let imgLink = "";
