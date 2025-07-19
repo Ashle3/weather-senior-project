@@ -1,6 +1,8 @@
 header{
     background-color: #2a2cf8;
     padding: 2px 10px;
+    display: flex;
+    align-items: center;
 }
 
 h1 {
@@ -11,7 +13,7 @@ h1 {
 }
 
 .search{
-    float: right;
+    margin-left: auto;
 }
 
 input, button{

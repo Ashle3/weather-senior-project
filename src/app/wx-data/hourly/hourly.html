@@ -1,1 +1,173 @@
-<h2>Hourly Weather Forecast</h2>
+
+
+ <ul>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[0].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[0].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[0].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[0].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[1].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[1].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[1].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[1].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[2].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[2].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[2].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[2].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[3].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[3].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[3].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[3].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[4].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[4].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[4].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[4].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[5].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[5].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[5].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[5].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[6].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[6].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[6].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[6].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[7].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[7].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[7].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[7].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[8].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[8].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[8].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[8].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[9].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[9].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[9].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[9].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[10].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[10].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[10].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[10].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[11].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[11].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[11].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[11].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[12].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[12].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[12].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[12].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[13].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[13].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[13].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[13].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[14].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[14].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[14].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[14].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[15].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[15].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[15].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[15].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[16].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[16].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[16].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[16].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[17].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[17].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[17].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[17].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[18].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[18].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[18].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[18].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[19].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[19].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[19].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[19].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[20].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[20].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[20].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[20].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[21].datetimeEpoch | time | date: 'ha'}}</p>
+     <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[21].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[21].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[21].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[22].datetimeEpoch | time | date: 'ha'}}</p>
+       <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[22].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[22].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[22].precipprob }}%</p>
+    
+    </li>
+    <li>
+        <p class="hour">{{ weatherData().days[0].hours[23].datetimeEpoch | time | date: 'ha'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].hours[23].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].hours[23].temp | number: '1.0-0'}}&deg;</p>
+        <p class="precip">{{ weatherData().days[0].hours[23].precipprob }}%</p>
+    
+    </li>
+
+ </ul>

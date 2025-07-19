@@ -4,10 +4,11 @@ import { HourlyComponent } from './hourly/hourly';
 import { HeaderComponent } from './header/header.component';
 import { WxDataService } from './wx-data.service';
 import { ErrorComponent } from './error/error';
+import { TimePipe } from './time.pipe';
 
 @Component({
   selector: 'app-wx-data',
-  imports: [ConditionsComponent, HourlyComponent, HeaderComponent, ErrorComponent],
+  imports: [ConditionsComponent, HourlyComponent, HeaderComponent, ErrorComponent, TimePipe],
   templateUrl: './wx-data.html',
   styleUrl: './wx-data.css',
   standalone: true

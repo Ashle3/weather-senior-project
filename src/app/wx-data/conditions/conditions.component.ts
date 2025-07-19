@@ -3,10 +3,12 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { DatePipe, DecimalPipe } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { WxDataService } from '../wx-data.service';
+import { DefaultComponent } from '../default/default';
+import { TimePipe } from '../time.pipe';
 
 @Component({
   selector: 'app-conditions',
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, DefaultComponent, DatePipe, TimePipe],
   templateUrl: './conditions.component.html',
   styleUrl: './conditions.component.css',
   standalone: true
@@ -14,6 +16,7 @@ import { WxDataService } from '../wx-data.service';
 export class ConditionsComponent implements OnInit{
   public weatherService = inject(WxDataService);
   public weatherData = signal<any>(undefined);
+  public icon: any;
   
   ngOnInit(): void {
       this.weatherService.search.subscribe(
@@ -25,6 +28,7 @@ export class ConditionsComponent implements OnInit{
             console.log(resData);
             this.weatherData.set(resData);
             this.weatherService.error1.set(false);
+            //console.log(this.weatherService.setIcon(this.weatherService.currentConditions.));
           },
             error: () => {
             this.weatherService.error1.set(true);
@@ -41,7 +45,10 @@ export class ConditionsComponent implements OnInit{
         }
       });
 
+    
   }
+
+  
 
   // loadConditions(cityName: any) {
   //   this.weatherService.getConditions(cityName)

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { WxDataService } from '../wx-data.service';
+import { DefaultComponent } from '../default/default';
 
 @Component({
     selector: 'app-header',
