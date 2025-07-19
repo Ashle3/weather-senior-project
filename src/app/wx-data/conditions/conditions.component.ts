@@ -16,7 +16,6 @@ import { TimePipe } from '../time.pipe';
 export class ConditionsComponent implements OnInit{
   public weatherService = inject(WxDataService);
   public weatherData = signal<any>(undefined);
-  public icon: any;
   
   ngOnInit(): void {
       this.weatherService.search.subscribe(

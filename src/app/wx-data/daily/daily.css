@@ -1,0 +1,29 @@
+ul{
+    list-style-type: none;
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+li{
+    font-size: 30px;
+    line-height: 10px;
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+img{
+    width: 100px;
+}
+
+.day{
+    font-weight: bold;
+}
+
+.temp{
+    font-size: 40px;
+}

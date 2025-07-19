@@ -1,0 +1,107 @@
+<ul>
+    <li>
+        <p class="day">{{ weatherData().days[0].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[0].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[0].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[0].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[0].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[1].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[1].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[1].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[1].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[1].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[2].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[2].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[2].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[2].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[2].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[3].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[3].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[3].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[3].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[3].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[4].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[4].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[4].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[4].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[4].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[5].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[5].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[5].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[5].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[5].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[6].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[6].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[6].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[6].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[6].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[7].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[7].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[7].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[7].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[7].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[8].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[8].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[8].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[8].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[8].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[9].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[9].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[9].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[9].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[9].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[10].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[10].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[10].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[10].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[10].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[11].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[11].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[11].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[11].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[11].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[12].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[12].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[12].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[12].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[12].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[13].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[13].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[13].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[13].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[13].precipprob | number: '1.0-0'}}%</p>
+    </li>
+    <li>
+        <p class="day">{{ weatherData().days[14].datetimeEpoch | time | date: 'EEE'}}</p>
+        <p>{{ weatherData().days[14].datetimeEpoch | time | date: 'M/d'}}</p>
+        <img [src]="weatherService.setIcon(`${weatherData().days[14].icon}`)" alt="Weather Icon">
+        <p class="temp">{{ weatherData().days[14].temp | number: '1.0-0' }}&deg;</p>
+        <p>{{ weatherData().days[14].precipprob | number: '1.0-0'}}%</p>
+    </li>
+</ul>
