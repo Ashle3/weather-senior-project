@@ -1,4 +1,6 @@
-<body>
+<body 
+[class.night]="weatherService.check(`${weatherService.currentTime}`, `
+${weatherService.getEpoch(`${weatherData().currentConditions.sunsetEpoch}`)}`)">
     <h2 class="cityName">{{ weatherData().resolvedAddress }}</h2>
     <app-default></app-default>
     <p>{{ weatherData().currentConditions.conditions }}</p>
@@ -21,3 +23,4 @@
     <p>Sunset: {{ weatherData().currentConditions.sunsetEpoch | time | date: 'shortTime' }}</p>
     <p>UV Index: {{ weatherData().currentConditions.uvindex }}</p>
 </body>
+

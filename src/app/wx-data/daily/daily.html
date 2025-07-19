@@ -1,5 +1,7 @@
 <ul>
-    <li>
+    <li
+    [class.night]="weatherService.check(`${weatherService.currentTime}`, `
+    ${weatherService.getEpoch(`${weatherData().currentConditions.sunsetEpoch}`)}`)">
         <p class="day">{{ weatherData().days[0].datetimeEpoch | time | date: 'EEE'}}</p>
         <p>{{ weatherData().days[0].datetimeEpoch | time | date: 'M/d'}}</p>
         <img [src]="weatherService.setIcon(`${weatherData().days[0].icon}`)" alt="Weather Icon">

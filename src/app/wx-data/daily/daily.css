@@ -10,7 +10,7 @@ li{
     line-height: 10px;
     text-align: center;
     padding: 5px;
-    background-color: white;
+    background-color: lightblue;
     width: 150px;
     margin-right: 10px;
     border-radius: 10px;
@@ -26,4 +26,9 @@ img{
 
 .temp{
     font-size: 40px;
+}
+
+.night{
+    background-color: darkblue;
+    color: white;
 }

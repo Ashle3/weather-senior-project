@@ -10,6 +10,26 @@ export class WxDataService{
         
     }
 
+    public currentTime = new Date().getTime();
+
+    public getPlaceTime(epoch: string){
+        let newDate = new Date(epoch).getTime();
+        return newDate;
+    }
+    
+    public getEpoch(epoch: string){
+        let newEpoch = new Date(epoch).getTime();
+        return newEpoch;
+    }
+
+    public check(time: any, epoch: any){
+        if(time > epoch ){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private httpClient = inject(HttpClient);
     public search = new EventEmitter<string>();
     //public setDef = new EventEmitter<boolean>();
